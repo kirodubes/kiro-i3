@@ -1,4 +1,4 @@
-# CLAUDE.md — edu-i3
+# CLAUDE.md — kiro-i3
 
 ## Project overview
 

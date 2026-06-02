@@ -1,0 +1,143 @@
+###############################################################################
+#  KEYBINDINGS — i3
+#  Source: etc/skel/.config/i3/config
+#  Generated: 2026.06.01 by /kiro-keybindings-all-twms — DO NOT EDIT BY HAND
+###############################################################################
+
+── 1. Applications & Launchers ───────────────────────────────────────────────
+  super + d                 rofi launcher (launcher.sh)
+  super + shift + d         dmenu
+  super + Ctrl + s          kiro-keybindings (cheatsheet)
+  super + F11               rofi drun (fullscreen)
+  super + F12               rofi drun (small)
+  alt + F2                  xfce4-appfinder (collapsed)
+  alt + F3                  xfce4-appfinder
+  ctrl + alt + a            xfce4-appfinder
+  super + Return            alacritty (terminal)
+  super + KP_Enter          alacritty (terminal)
+  ctrl + alt + t            alacritty (terminal)
+  ctrl + alt + Return       alacritty (terminal)
+  ctrl + alt + KP_Enter     alacritty (terminal)
+  F12                       xfce4-terminal (drop-down)
+  ctrl + alt + e            archlinux-tweak-tool
+  ctrl + alt + d            obs
+  ctrl + shift + Escape     xfce4-taskmanager
+  ctrl + alt + m            xfce4-settings-manager
+  ctrl + alt + c            catfish (file search)
+  ctrl + alt + r            rofi-theme-selector
+  ctrl + alt + u            pavucontrol
+  ctrl + alt + p            pamac-manager
+  super + F1                web browser (exo-open)
+  super + w                 web browser (exo-open)
+  ctrl + alt + f            firefox
+  ctrl + alt + v            vivaldi
+  ctrl + alt + g            chromium
+  super + F2                code (VS Code)
+  super + F3                inkscape
+  super + F4                gimp
+  super + F5                meld
+  ctrl + alt + i            nitrogen (wallpaper)
+  super + F6                vlc
+  super + F7                virtualbox
+  super + F8                thunar (file manager)
+  super + shift + Return    thunar (file manager)
+  super + shift + KP_Enter  thunar (file manager)
+  ctrl + alt + b            thunar (file manager)
+  super + F9                lollypop
+  super + F10               spotify
+  ctrl + alt + s            spotify
+  super + c                 toggle conky
+  super + ctrl + c          kill all conky
+  ctrl + alt + Next         conky-rotate next
+  ctrl + alt + Prior        conky-rotate previous
+
+── 2. Window Management ───────────────────────────────────────────────────────
+  super + q                 close focused window
+  super + shift + q         close focused window
+  super + Escape            xkill (click to kill window)
+  super + shift + space     toggle floating
+  super + space             toggle focus tiling / floating
+  super + a                 focus parent container
+  super + j                 focus window left
+  super + k                 focus window down
+  super + l                 focus window up
+  super + semicolon         focus window right
+  super + Left              focus window left
+  super + Down              focus window down
+  super + Up                focus window up
+  super + Right             focus window right
+  super + shift + j         move window left
+  super + shift + k         move window down
+  super + shift + l         move window up
+  super + shift + semicolon move window right
+  super + shift + Left      move window left
+  super + shift + Down      move window down
+  super + shift + Up        move window up
+  super + shift + Right     move window right
+  super + ctrl + alt + Right  resize: shrink width 1px
+  super + ctrl + alt + Up     resize: grow height 1px
+  super + ctrl + alt + Down   resize: shrink height 1px
+  super + ctrl + alt + Left   resize: grow width 1px
+
+── 3. Workspaces / Tags / Groups ─────────────────────────────────────────────
+  super + 1..0              switch to workspace 1..10
+  super + shift + 1..0      send window to workspace 1..10 & follow
+  super + Tab               workspace back-and-forth
+  alt + Tab                 next workspace
+  alt + shift + Tab         previous workspace
+  alt + ctrl + Right        next workspace
+  alt + ctrl + Left         previous workspace
+
+── 4. Layout & Tiling ─────────────────────────────────────────────────────────
+  super + h                 split horizontal
+  super + v                 split vertical
+  super + f                 toggle fullscreen
+  super + s                 layout stacking
+  super + z                 layout tabbed
+  super + e                 layout toggle split
+  super + b                 toggle bar (show / hide)
+  super + shift + b         toggle window border
+  super + t                 border: normal
+  super + y                 border: pixel 1
+  super + u                 border: none
+  super + g                 toggle compositor (fastcompmgr)
+  super + shift + g         enter gaps mode (o outer / i inner, +/-/0)
+
+── 6. Multimedia & Hardware ───────────────────────────────────────────────────
+  XF86AudioRaiseVolume      volume +5% (amixer Master)
+  XF86AudioLowerVolume      volume -5% (amixer Master)
+  XF86AudioMute             toggle mute (amixer Master)
+  XF86AudioPlay             playerctl play-pause
+  XF86AudioNext             playerctl next
+  XF86AudioPrev             playerctl previous
+  XF86AudioStop             playerctl stop
+  XF86MonBrightnessUp       brightness +20 (xbacklight)
+  XF86MonBrightnessDown     brightness -20 (xbacklight)
+  alt + t                   variety: trash wallpaper
+  alt + n                   variety: next wallpaper
+  alt + Right               variety: next wallpaper
+  alt + p                   variety: previous wallpaper
+  alt + Left                variety: previous wallpaper
+  alt + f                   variety: favorite wallpaper
+  alt + Up                  variety: pause
+  alt + Down                variety: resume
+  alt + shift + n           variety next + pywal recolor
+  alt + shift + p           variety prev + pywal recolor
+  alt + shift + t           variety trash + pywal recolor
+  alt + shift + u           pywal: recolor from current wallpaper
+
+── 7. Screenshots ─────────────────────────────────────────────────────────────
+  Print                     scrot (full screen → Pictures)
+  ctrl + Print              xfce4-screenshooter
+  ctrl + shift + Print      gnome-screenshot (interactive)
+  super + ctrl + Print      flameshot gui (region)
+
+── 8. System & Session ────────────────────────────────────────────────────────
+  ctrl + alt + X            system mode: (k)lock (l)logout (u)suspend (h)hibernate (r)reboot (s)shutdown
+  super + shift + e         archlinux-logout
+  super + X                 archlinux-logout
+  super + shift + X         arcolinux-powermenu
+  ctrl + alt + k            archlinux-logout
+  ctrl + alt + l            archlinux-logout
+  super + shift + r         restart i3 in place
+  super + shift + c         reload i3 configuration

@@ -2,7 +2,7 @@
   <img src="kiro.jpg" alt="Kiro" width="220" />
 </p>
 
-# edu-i3
+# kiro-i3
 
 Educational / tutorial repository for [i3wm](https://i3wm.org/), the popular tiling window manager. Part of the `~/EDU/` learning series — a working i3 config dropped on top of a fresh Arch / Kiro install.
 
@@ -10,6 +10,10 @@ Educational / tutorial repository for [i3wm](https://i3wm.org/), the popular til
 
 - `etc/skel/` — i3 config + supporting dotfiles that land in `/etc/skel/`.
 - `setup.sh`, `up.sh`, `cleanup.sh` — standard EDU bash scaffold.
+
+## Keybindings
+
+Press **`Super + Ctrl + S`** to open the searchable **kiro-keybindings** cheatsheet — an on-screen, type-to-filter list of every shortcut, identical across all Kiro desktops. The full list also ships as a plain-text [`keybindings.txt`](etc/skel/.config/i3/keybindings.txt) in the config directory.
 
 ## Installation
 
@@ -23,7 +27,7 @@ Server = https://erikdubois.github.io/$repo/$arch
 
 ```bash
 sudo pacman -Syu
-sudo pacman -S edu-i3-git
+sudo pacman -S kiro-i3
 ```
 
 You'll also need i3:
@@ -35,8 +39,8 @@ sudo pacman -S i3-wm i3status i3lock
 ### Manual
 
 ```bash
-git clone https://github.com/erikdubois/edu-i3.git
-cd edu-i3
+git clone https://github.com/kirodubes/kiro-i3.git
+cd kiro-i3
 sudo cp -r etc/skel/. /etc/skel/
 ```
 

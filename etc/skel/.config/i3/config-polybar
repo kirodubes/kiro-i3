@@ -30,8 +30,15 @@ set $right semicolon
 
 ################# Single and Dual screen
 
-# current displays
-exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+# ── Monitor layout ──────────────────────────────────────────────────────────
+# Apply a saved arandr/xrandr screen layout named after the current user.
+# Generate your layout with arandr, save it to ~/.screenlayout/<username>.sh
+# Uncomment the xrandr line below if you are running inside VirtualBox.
+# exec --no-startup-id xrandr --output Virtual-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+exec --no-startup-id sh -c '[ -f "$HOME/.screenlayout/$(whoami).sh" ] && sh "$HOME/.screenlayout/$(whoami).sh"'
+
+# current displays (hardcoded layout - replaced by the per-user screenlayout above)
+# exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
 
 # setting variables for later use
 # use xrandr and/or arandr to know the names of your monitors
@@ -340,9 +347,6 @@ font pango:Noto Mono Regular 13
 
 # USER APPLICATIONS TO START AT BOOT
 
-# ArcoLinux Welcome App
-exec --no-startup-id dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
-
 # Autotiling
 exec_always --no-startup-id autotiling
 
@@ -423,9 +427,6 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 ################# applications keyboard shortcuts  
 
 # not workspace related
-
-# ArcoLinux Welcome App
-bindsym control+mod1+w exec --no-startup-id arcolinux-welcome-app
 
 # ArchLinux Tweak Tool
 bindsym control+mod1+e exec --no-startup-id archlinux-tweak-tool
@@ -537,7 +538,6 @@ bindsym $mod+Control+Print exec --no-startup-id flameshot gui
 
 # floating enabled from some programs - find with xprop
 
-for_window [class="Arcolinux-welcome-app.py"] floating enable
 # for_window [class="Archlinux-tweak-tool.py"] floating enable
 for_window [class="Arcolinux-calamares-tool.py"] floating enable
 for_window [class="Bleachbit"] floating disable
