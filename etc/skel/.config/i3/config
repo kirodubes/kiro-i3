@@ -37,18 +37,8 @@ set $right semicolon
 # exec --no-startup-id xrandr --output Virtual-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 exec --no-startup-id sh -c '[ -f "$HOME/.screenlayout/$(whoami).sh" ] && sh "$HOME/.screenlayout/$(whoami).sh"'
 
-# current displays (hardcoded layout - replaced by the per-user screenlayout above)
-# exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
-
-# setting variables for later use
-# use xrandr and/or arandr to know the names of your monitors
-# use this line to tell which monitor is on the right
-# xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
-# exec --no-startup-id xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
-# exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
-# exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
-# exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
-# exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
+# Per-machine xrandr layouts live in ~/.screenlayout/<username>.sh (set above),
+# not hardcoded here. Generate yours with arandr.
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -411,7 +401,6 @@ exec --no-startup-id variety
 exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 # feh sets wallpaper
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
 exec --no-startup-id feh --bg-fill /usr/share/backgrounds/kiro/kiro-wallpaper.jpg &
 # for other Arch Linux based distros
 # exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
