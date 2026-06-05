@@ -36,7 +36,6 @@
   super + F3                inkscape
   super + F4                gimp
   super + F5                meld
-  ctrl + alt + i            nitrogen (wallpaper)
   super + F6                vlc
   super + F7                virtualbox
   super + F8                thunar (file manager)
@@ -46,10 +45,6 @@
   super + F9                lollypop
   super + F10               spotify
   ctrl + alt + s            spotify
-  super + c                 toggle conky
-  super + ctrl + c          kill all conky
-  ctrl + alt + Next         conky-rotate next
-  ctrl + alt + Prior        conky-rotate previous
 
 ── 2. Window Management ───────────────────────────────────────────────────────
   super + q                 close focused window

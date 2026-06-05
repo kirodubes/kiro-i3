@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026.06.02
+
+### What Changed
+- Cleaned the autostart/monitor regions of `etc/skel/.config/i3/config` per the canonical [TWM autostart standard](/home/erik/Insync/Kiro/Kiro-HQ/AUTOSTART_TEMPLATE.md) (native WMs get the light touch — structure left intact). No app behavior changed.
+- Removed the dead `# exec --no-startup-id xrandr …` hardware preset wall under the monitor section (per-machine xrandr lives in `~/.screenlayout/<username>.sh`, which the canonical block already sources).
+- Fixed a redundant double-`feh`: the config set `archlinux/arch-wallpaper.jpg` and then immediately overrode it with `kiro/kiro-wallpaper.jpg` — dropped the dead first line.
+- Removed the broken cross-distro fallback `# feh … /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png` — that file does not exist (the real ATT file is `wallpaper.jpg`), so the hint was wrong as written.
+
+### Files Modified
+- etc/skel/.config/i3/config
+
 ## 2026.06.01
 
 ### What Changed

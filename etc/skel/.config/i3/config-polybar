@@ -322,7 +322,7 @@ font pango:Noto Mono Regular 13
 # assign [class="Gimp"]                                                               → 4
 
 # Workspace 5 Images and meld
-# assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer|Nitrogen"]             → 5
+# assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer"]             → 5
 # assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → 5
 # assign [class="Meld"]                                                               → 5
 
@@ -404,8 +404,6 @@ exec --no-startup-id volumeicon
 # clipman
 # exec --no-startup-id xfce4-clipman
 
-# Conky
-exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 # feh sets wallpaper
 exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
@@ -431,11 +429,6 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 # ArchLinux Tweak Tool
 bindsym control+mod1+e exec --no-startup-id archlinux-tweak-tool
 
-# conky
-bindsym $mod+c exec --no-startup-id conky-toggle
-bindsym $mod+control+c exec --no-startup-id killall conky
-bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
-bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
 
 # terminal
 bindsym $mod+Return exec --no-startup-id alacritty;focus
@@ -502,7 +495,6 @@ bindsym $mod+F4 exec --no-startup-id gimp;focus
 
 # document comparison
 bindsym $mod+F5 exec --no-startup-id meld;focus
-bindsym control+mod1+i exec --no-startup-id nitrogen;focus
 
 # video player
 bindsym $mod+F6 exec --no-startup-id vlc;focus
@@ -551,7 +543,6 @@ for_window [class="Hexchat"] floating disable
 for_window [class="Imagewriter"] floating enable
 for_window [class="Font-manager"] floating enable
 # for_window [class="qt5ct|Lxappearance] floating enable
-for_window [class="Nitrogen"] floating disable
 for_window [class="Pavucontrol"] floating disable
 for_window [class="Peek"] floating enable
 for_window [class="^Skype$"] floating enable

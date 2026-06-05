@@ -315,7 +315,7 @@ font pango:Noto Mono Regular 13
 # assign [class="Gimp"]                                                               → 4
 
 # Workspace 5 Images and meld
-# assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer|Nitrogen"]             → 5
+# assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer"]             → 5
 # assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → 5
 # assign [class="Meld"]                                                               → 5
 
@@ -397,13 +397,9 @@ exec --no-startup-id variety
 # clipman
 # exec --no-startup-id xfce4-clipman
 
-# Conky
-exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 # feh sets wallpaper
 exec --no-startup-id feh --bg-fill /usr/share/backgrounds/kiro/kiro-wallpaper.jpg &
-# for other Arch Linux based distros
-# exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 
 # Polybar
 # exec_always --no-startup-id ~/.config/polybar/launch.sh &
@@ -426,11 +422,6 @@ bindsym control+mod1+e exec --no-startup-id archlinux-tweak-tool
 # OBS
 bindsym control+mod1+d exec --no-startup-id obs
 
-# conky
-bindsym $mod+c exec --no-startup-id conky-toggle
-bindsym $mod+control+c exec --no-startup-id killall conky
-bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
-bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
 
 # terminal
 bindsym $mod+Return exec --no-startup-id alacritty;focus
@@ -497,7 +488,6 @@ bindsym $mod+F4 exec --no-startup-id gimp;focus
 
 # document comparison
 bindsym $mod+F5 exec --no-startup-id meld;focus
-bindsym control+mod1+i exec --no-startup-id nitrogen;focus
 
 # video player
 bindsym $mod+F6 exec --no-startup-id vlc;focus
@@ -546,7 +536,6 @@ for_window [class="Hexchat"] floating disable
 for_window [class="Imagewriter"] floating enable
 for_window [class="Font-manager"] floating enable
 # for_window [class="qt5ct|Lxappearance] floating enable
-for_window [class="Nitrogen"] floating disable
 for_window [class="Pavucontrol"] floating disable
 for_window [class="Peek"] floating enable
 for_window [class="^Skype$"] floating enable
@@ -756,14 +745,8 @@ bar {
     # status_command i3blocks -c ~/.config/i3/i3blocks-awesome.conf
 
 
-    # OPTION 3 : conky
 
-    # You can also replace the istatus bar with a conky
-    # start-conky-i3statusbar.sh is started and conky will follow
-    # documentation : https://i3wm.org/docs/user-contributed/conky-i3bar.html
-    # conky configuration is in conky-i3statusbar
 
-	# status_command ~/.config/i3/start-conky-i3statusbar.sh
 
     # OPTION 4 : polybar
 
