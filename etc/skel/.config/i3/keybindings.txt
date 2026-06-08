@@ -32,6 +32,7 @@
   ctrl + alt + f            firefox
   ctrl + alt + v            vivaldi
   ctrl + alt + g            chromium
+  ctrl + alt + i            kiro-iso-builder
   super + F2                code (VS Code)
   super + F3                inkscape
   super + F4                gimp
