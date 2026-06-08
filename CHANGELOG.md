@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026.06.08
+
+### What Changed
+- Rebound `Super + F9` from `lollypop` to `virt-manager`, matching the distro-wide change applied across all Kiro environments.
+
+### Technical Details
+- Edited the `bindsym $mod+F9` line in `i3/config` (comment + command) and regenerated the cheatsheet (`keybindings.txt` → `keybindings.html` + `keybindings.pdf` via `kiro-keybindings-html.py`).
+
+### Files Modified
+- `etc/skel/.config/i3/config`
+- `etc/skel/.config/i3/keybindings.txt`
+- `etc/skel/.config/i3/keybindings.html`
+- `etc/skel/.config/i3/keybindings.pdf`
+
 ## 2026.06.02
 
 ### What Changed

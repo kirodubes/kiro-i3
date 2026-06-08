@@ -1,7 +1,7 @@
 ###############################################################################
 #  KEYBINDINGS — i3
 #  Source: etc/skel/.config/i3/config
-#  Generated: 2026.06.01 by /kiro-keybindings-all-twms — DO NOT EDIT BY HAND
+#  Generated: 2026.06.08 by /kiro-keybindings-all-twms-xfce — DO NOT EDIT BY HAND
 ###############################################################################
 
 ── 1. Applications & Launchers ───────────────────────────────────────────────
@@ -42,7 +42,7 @@
   super + shift + Return    thunar (file manager)
   super + shift + KP_Enter  thunar (file manager)
   ctrl + alt + b            thunar (file manager)
-  super + F9                lollypop
+  super + F9                virt-manager
   super + F10               spotify
   ctrl + alt + s            spotify
 
