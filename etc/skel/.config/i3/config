@@ -873,9 +873,3 @@ bindsym Control+Mod1+End exec --no-startup-id alacritty -e btop
 
 # opera
 bindsym Control+Mod1+o exec --no-startup-id opera
-
-# update-system
-bindsym Control+Mod1+Shift+F1 exec --no-startup-id update-system
-
-# update-system
-bindsym $mod+Control+Shift+F1 exec --no-startup-id update-system
