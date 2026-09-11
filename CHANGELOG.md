@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026.09.11
+
+### What Changed
+- Fixed the i3 startup error banner "You have an error in your i3 config file! / Duplicate keybinding". Three keys were bound twice: `Super + e`, `Super + t` and `Super + v` each carried both an old i3 tiling command and the app-launcher propagated from ohmychadwm (June 2026). i3 silently let the last binding win, so the launchers worked and the tiling commands were dead — but i3 raised the error nag on every login.
+- The launchers keep the plain keys (master wins for apps); the three tiling commands moved to Shift variants so the functionality is back instead of being dropped.
+
+### Technical Details
+- `Super + v` (split v) → `Super + Shift + v`, `Super + e` (layout toggle split) → `Super + Shift + s`, `Super + t` (border normal) → `Super + Shift + t`. All three targets were unbound; a full duplicate sweep over `bindsym` lines now comes back clean.
+- `keybindings.txt` gained the three entries in section 4 (Layout & Tiling) — they had been dropped from the cheatsheet when the launchers took over the keys.
+
+### Files Modified
+- `etc/skel/.config/i3/config`
+- `etc/skel/.config/i3/keybindings.txt`
+
 ## 2026.06.30
 
 ### What Changed

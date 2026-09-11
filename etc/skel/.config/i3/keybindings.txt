@@ -96,11 +96,14 @@
 
 ── 4. Layout & Tiling ────────────────────────────────────────────────────────
   super + h                 split horizontal
+  super + shift + v         split vertical
   super + f                 toggle fullscreen
   super + s                 layout stacking
   super + z                 layout tabbed
+  super + shift + s         layout toggle split
   super + b                 toggle bar (show / hide)
   super + shift + b         toggle window border
+  super + shift + t         border: normal
   super + y                 border: pixel 1
   super + u                 border: none
   super + g                 toggle compositor (fastcompmgr)

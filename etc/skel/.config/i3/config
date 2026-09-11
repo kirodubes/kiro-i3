@@ -231,7 +231,7 @@ default_orientation horizontal
 bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+Shift+v split v
 
 # enter fullscreen mode for the focused container
 # Super + F in arcolinux is execute thunar
@@ -241,7 +241,7 @@ bindsym $mod+f fullscreen toggle
 # qwerty/azerty issue for letter z
 bindsym $mod+s layout stacking
 bindsym $mod+z layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+Shift+s layout toggle split
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -635,7 +635,7 @@ bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 
 # changing border style
 # super+t in arcolinux is starting terminal
-bindsym $mod+t border normal
+bindsym $mod+Shift+t border normal
 bindsym $mod+y border pixel 1
 bindsym $mod+u border none
 
