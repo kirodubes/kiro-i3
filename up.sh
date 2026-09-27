@@ -7,6 +7,15 @@ set -euo pipefail
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
+#   Purpose:
+#   - Standard daily up-sync for any block in the ecosystem.
+#   - Ensures git remote is SSH (runs setup.sh if not), pulls latest,
+#     cleans __pycache__, optionally runs chaotic.sh / repo.sh /
+#     build/sync-videos.py, then stages, commits, and pushes the working tree.
+#
+#   Why: one command to keep a block in sync with its remote, with
+#   safe defaults (auto-rebase on rejected push, never force-push).
+#
 #####################################################################
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
@@ -133,7 +142,7 @@ git_commit_and_push() {
     if [[ -z "$(git -C "${SCRIPT_DIR}" status --porcelain)" ]]; then
         log_info "Nothing to commit — working tree clean"
     else
-        git -C "${SCRIPT_DIR}" commit -m "update" || log_error "Git commit failed"
+        git -C "${SCRIPT_DIR}" commit -m "${COMMIT_MSG:-update}" || log_error "Git commit failed"
     fi
 
     branch="$(git -C "${SCRIPT_DIR}" rev-parse --abbrev-ref HEAD)"
@@ -161,6 +170,15 @@ main() {
     if [[ -f "${SCRIPT_DIR}/repo.sh" ]]; then
         log_section "Running repo.sh"
         bash "${SCRIPT_DIR}/repo.sh"
+    fi
+
+    # Optional per-repo hook: if a block ships build/sync-videos.py (currently
+    # only kiro-assistant), regenerate its generated content before committing.
+    # Inert in every other repo. Non-fatal so a missing creds/deps never blocks
+    # the push.
+    if [[ -f "${SCRIPT_DIR}/build/sync-videos.py" ]]; then
+        log_section "Running build/sync-videos.py"
+        python "${SCRIPT_DIR}/build/sync-videos.py" || log_warn "Video sync skipped (missing creds or deps) — keeping current files"
     fi
 
     git_commit_and_push
