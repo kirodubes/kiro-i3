@@ -1,0 +1,20 @@
+#!/bin/sh
+#####################################################################
+# Author    : Erik Dubois
+# Website   : https://kiroproject.be
+#####################################################################
+#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
+#
+# Purpose:
+#   Hide the "i3 (with debug log)" login entry shipped by i3-wm.
+#   It runs plain i3 with an in-memory debug log, only useful when
+#   filing an i3 bug report, and looks like a duplicate in SDDM.
+# Why:
+#   The file belongs to the i3-wm package, so every i3-wm upgrade
+#   puts it back. A pacman hook runs this again each time.
+#####################################################################
+
+# Hidden rather than removed, same as kiro-qtile and kiro-xfce do.
+f=/usr/share/xsessions/i3-with-shmlog.desktop
+[ -f "$f" ] || exit 0
+grep -q '^NoDisplay=true$' "$f" || printf 'NoDisplay=true\n' >> "$f"

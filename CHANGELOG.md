@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026.10.18
+
+### What Changed
+- Hid the "i3 (with debug log)" entry on the SDDM login screen. i3-wm ships `i3-with-shmlog.desktop` next to `i3.desktop`; it runs the same i3 plus an in-memory debug log that only matters when filing an i3 bug report, so it looked like a duplicate session.
+
+### Technical Details
+- New `/usr/bin/kiro-i3-hide-sessions` appends `NoDisplay=true` (idempotent) — hidden, not removed, same as kiro-qtile and kiro-xfce. A pacman hook re-runs it whenever i3-wm installs or upgrades the file; `post_install`/`post_upgrade` run it too, because the hook does not fire when kiro-i3 is installed on a box that already has i3-wm.
+- The PKGBUILD now also copies `usr/` into the package.
+
+### Files Modified
+- `usr/bin/kiro-i3-hide-sessions` (new)
+- `usr/share/libalpm/hooks/kiro-i3-hide-sessions.hook` (new)
+- `KIRO-PKG-BUILD-APPS/kiro-i3/PKGBUILD`, `readme.install`
+
 ## 2026.09.27
 
 ### What Changed

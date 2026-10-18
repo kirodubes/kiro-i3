@@ -1,0 +1,11 @@
+# Re-hide the i3 debug-log session after any i3-wm install/upgrade
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Path
+Target = usr/share/xsessions/i3-with-shmlog.desktop
+
+[Action]
+Description = Hiding the i3 debug-log session
+When = PostTransaction
+Exec = /usr/bin/kiro-i3-hide-sessions
