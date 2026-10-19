@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026.10.19
+
+### What Changed
+- Added the new ohmychadwm keybindings (added to ohmychadwm today) so they work the same here:
+  - Super+Ctrl+L locks the screen
+  - Super+Ctrl+A opens pavucontrol
+  - Super+Ctrl+Shift+A opens an AI agent (`alacritty -e claude`); Claude Code is not part of Kiro, so without it the terminal closes straight away
+  - Super+Shift+F opens thunar
+  - Super+Shift+B opens vivaldi
+  - Super+Shift+N opens code
+  - Super+Shift+M opens spotify
+  - XF86AudioMicMute mutes the microphone
+  - Alt+volume keys change the volume by 1%
+- Left out because the key already does something else here: Super+K (focus down (`$down` is k)).
+
+### Technical Details
+- Propagated with `kiro-update-keybindings.py`, then checked by hand: the engine does not expand sxhkd `{h,j,k,l}` braces, i3 `$down`-style variables, or the WM-native configs, so it proposed some keys that were already taken.
+- Super+W (close) and Super+Up/Down (focus) were not ported; they are window-manager actions, native per WM.
+- `ctrl+alt+x` → `oma` was not ported: oma is ohmychadwm Appearance and only works there.
+- The engine wanted to overwrite Super+Shift+B (`border toggle`) with vivaldi; kept border toggle.
+- Added the new keys to the cheatsheet and bumped its Generated date.
+
+### Files Modified
+- `etc/skel/.config/i3/config`
+- `etc/skel/.config/i3/keybindings.txt`
+
 ## 2026.10.18
 
 ### What Changed

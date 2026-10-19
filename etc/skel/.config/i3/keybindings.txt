@@ -1,7 +1,7 @@
 ###############################################################################
 #  KEYBINDINGS — i3
 #  Source: etc/skel/.config/i3/config
-#  Generated: 2026.06.30
+#  Generated: 2026.10.19
 #  Reference for the default bindings. Changed yours? Edit this file to match.
 ###############################################################################
 
@@ -56,6 +56,11 @@
   ctrl + alt + i            kiro-iso-builder
   ctrl + alt + End          btop (in alacritty)
   ctrl + shift + Escape     xfce4-taskmanager
+  super + ctrl + a          pavucontrol
+  super + ctrl + shift + a  alacritty -e claude (AI agent)
+  super + shift + f         thunar (file manager)
+  super + shift + n         code (editor)
+  super + shift + m         spotify
 
 ── 2. Window Management ──────────────────────────────────────────────────────
   super + q                 close focused window
@@ -133,6 +138,9 @@
   alt + shift + p           variety prev + pywal recolor
   alt + shift + t           variety trash + pywal recolor
   alt + shift + u           pywal: recolor from current wallpaper
+  XF86AudioMicMute          toggle microphone mute
+  alt + XF86AudioRaiseVolume  raise volume by 1%
+  alt + XF86AudioLowerVolume  lower volume by 1%
 
 ── 7. Screenshots ────────────────────────────────────────────────────────────
   Print                     scrot (full screen → Pictures)
@@ -150,3 +158,4 @@
   ctrl + alt + r            archlinux-betterlockscreen (lock screen)
   super + shift + r         restart i3 in place
   super + shift + c         reload i3 configuration
+  super + ctrl + l          archlinux-betterlockscreen (lock screen)

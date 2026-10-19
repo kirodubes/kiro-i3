@@ -873,3 +873,32 @@ bindsym Control+Mod1+End exec --no-startup-id alacritty -e btop
 
 # opera
 bindsym Control+Mod1+o exec --no-startup-id opera
+
+
+# pavucontrol
+bindsym $mod+Control+a exec --no-startup-id pavucontrol
+
+# archlinux-betterlockscreen
+bindsym $mod+Control+l exec --no-startup-id archlinux-betterlockscreen
+
+# AI agent
+bindsym $mod+Control+Shift+a exec --no-startup-id alacritty -e claude
+
+# thunar
+bindsym $mod+Shift+f exec --no-startup-id thunar
+
+# code
+bindsym $mod+Shift+n exec --no-startup-id code
+
+# spotify
+bindsym $mod+Shift+m exec --no-startup-id spotify
+
+
+# pamixer
+bindsym XF86AudioMicMute exec --no-startup-id pamixer --default-source -t
+
+# pamixer
+bindsym Mod1+XF86AudioRaiseVolume exec --no-startup-id pamixer -i 1
+
+# pamixer
+bindsym Mod1+XF86AudioLowerVolume exec --no-startup-id pamixer -d 1
