@@ -152,7 +152,7 @@
   ctrl + alt + X            system mode: (k)lock (l)logout (u)suspend (h)hibernate (r)reboot (s)shutdown
   super + shift + e         archlinux-logout
   super + X                 archlinux-logout
-  super + shift + X         edu-powermenu
+  super + shift + X         kiro-powermenu
   ctrl + alt + k            archlinux-logout
   ctrl + alt + l            archlinux-logout (settings)
   ctrl + alt + r            archlinux-betterlockscreen (lock screen)
